@@ -1,0 +1,13 @@
+name: mocr
+version: 0.1.0
+
+authors:
+  - Daniel Salazar <disalazarg@gmail.com>
+
+targets:
+  mocr:
+    main: src/mocr.cr
+
+crystal: '>= 1.10.1'
+
+license: MIT
