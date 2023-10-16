@@ -1,0 +1,9 @@
+port: 3000
+vars:
+  name: test
+root:
+  path: /
+  name: root
+  type: body
+  body:
+    status: ok
