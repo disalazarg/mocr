@@ -7,5 +7,8 @@ describe Mocr::Parser do
 
     parser.should be_a Mocr::Parser::Config
     parser.root.should_not be_nil
+    parser.root.routes.should_not be_empty
+    parser.root.routes.first.should be_a Mocr::Parser::Route
+    parser.root.routes.first.url.should eq "/posts"
   end
 end

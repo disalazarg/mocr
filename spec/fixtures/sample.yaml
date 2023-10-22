@@ -6,4 +6,17 @@ root:
   name: root
   type: body
   body:
+    service: mocr
     status: ok
+  routes:
+    - path: /posts
+      name: posts
+      type: body
+      body:
+        title: Title
+        content: content
+    - path: /posts
+      name: posts
+      verb: POST
+      type: echo
+      status: 201

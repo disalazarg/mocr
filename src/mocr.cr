@@ -4,5 +4,7 @@ require "./mocr/*"
 module Mocr
   VERSION = "0.1.1"
 
-  Server.new.run
+  file = File.read "./spec/fixtures/sample.yaml"
+  config = Mocr::Parser.parse(file)
+  Server.new(config).run
 end
