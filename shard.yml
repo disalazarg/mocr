@@ -1,5 +1,5 @@
 name: mocr
-version: 0.1.0
+version: 0.1.1
 
 authors:
   - Daniel Salazar <disalazarg@gmail.com>
@@ -7,6 +7,12 @@ authors:
 targets:
   mocr:
     main: src/mocr.cr
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+  spec-kemal:
+    github: kemalcr/spec-kemal
 
 crystal: '>= 1.10.1'
 
