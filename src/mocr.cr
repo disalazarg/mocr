@@ -4,7 +4,7 @@ require "option_parser"
 module Mocr
   VERSION = "0.1.1"
 
-  file = "./spec/fixtures/sample.yaml"
+  file = Kemal.config.env == "test" ? "./spec/fixtures/sample.yaml" : "/app/config.yml"
   OptionParser.parse do |parser|
     parser.banner = "Usage: mocr -f config.yaml"
     parser.on "-f FILE", "--file FILE", "YAML config file" { |f| file = f }
